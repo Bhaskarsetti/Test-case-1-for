@@ -1,0 +1,54 @@
+package com.SeleniumProject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+import junit.framework.Assert;
+
+public class SourcrFuseTrail {
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		// for login
+		driver.get("http://sfwebhtml:t63KUfxL5vUyFLG4eqZNUcuRQ@sfwebhtml.sourcefuse.com/automation-form-demo-for-interview/");
+		System.out.println("Test Case 1: Try to submit without filling required fields and \"Labels\" of all the required fields printed on Console. ");
+		Thread.sleep(1000);
+		WebElement text1 = driver.findElement(By.xpath("//*[contains(text(),'First Name')]"));
+		System.out.println(text1.getText());
+		WebElement text2 = driver.findElement(By.xpath("//*[contains(text(),'Last Name')]"));
+		System.out.println(text2.getText());
+		WebElement text3 = driver.findElement(By.xpath("//*[contains(text(),'Email')]"));
+		System.out.println(text3.getText());
+		WebElement text4= driver.findElement(By.xpath("//*[contains(text(),'Current Company')]"));
+		System.out.println(text4.getText());
+		WebElement text5= driver.findElement(By.xpath("//*[contains(text(),'Mobile No.')]"));
+		System.out.println(text5.getText());
+		WebElement text6 = driver.findElement(By.xpath("//*[contains(text(),'Date of Birth ')]"));
+		System.out.println(text6.getText());
+		WebElement text7 = driver.findElement(By.xpath("//*[contains(text(),'Position you are applying for')]"));
+		System.out.println(text7.getText());
+		WebElement text8 = driver.findElement(By.xpath("//*[contains(text(),'Portfolio Website')]"));
+		System.out.println(text8.getText());
+		WebElement text9 = driver.findElement(By.xpath("//*[contains(text(),'Salary requirements ')]"));
+		System.out.println(text9.getText());
+		WebElement text10 = driver.findElement(By.xpath("//*[contains(text(),'Upload Your Resume ')]"));
+		System.out.println(text10.getText());
+		WebElement text11 = driver.findElement(By.xpath("//*[contains(text(),'Are you willing to relocate?')]"));
+		System.out.println(text11.getText());
+		
+		
+		
+		driver.close();
+		
+		
+		
+	}
+
+	
+}
